@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend course Pixel academy</title>
+
+  <!-- Bootstrap file attached -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <!-- Custom CSS for designing -->
+  <style>
+  /* Colors */
+:root {
+  --primary: #2b6cb0;
+  --secondary: #1a202c;
+  --light: #f7fafc;
+}
+
+/* Navbar */
+.main-nav {
+  background: linear-gradient(90deg, #0f172a, #1e293b);
+}
+
+/* Hero section */
+.home {
+  min-height: 80vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("images/hero.jpg") center/cover no-repeat;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary);
+  border: none;
+}
+
+.btn-outline-primary {
+  border-color: var(--primary);
+}
+
+/* Course cards */
+.course-card {
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Contact */
+.contact-section {
+  background: linear-gradient(135deg, #0f172a, #1f2937);
+}
+#about {
+  background: #f4f6fb;
+}
+
+#abu_im {
+  border-radius: 14px;
+  border: 6px solid #ffffff;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  height: auto;
+}
+
+#abo_p {
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 22px;
+
+  border-radius: 14px;
+  padding: 24px;
+
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("images/abtex.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  color: #2b2b2b;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.about-section h1 {
+  font-weight: 700;
+  color: #21406d;
+  letter-spacing: 1px;
+}
+
+.about-section span {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* Footer */
+footer {
+  letter-spacing: 0.5px;
+}
+
+</style>
+</head>
+
+
+<body>
+  <!--nav start-->
+  <nav class="navbar navbar-expand-sm navbar-dark shadow-sm main-nav fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"> Pixel Acedemy</a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#course" data-bs-toggle="dropdown">
+              Course
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="frontend-development.html">FrontEnd Development</a>
+              <a class="dropdown-item" href="pythonfullstack.html">PYTHON FullStack Course </a>
+              <a class="dropdown-item" href="javacourse.html">JAVA Course </a>
+              <a class="dropdown-item" href="reactjs-course.html">REACT js Course</a>
+              <a class="dropdown-item" href="dataanalyticcourse.html">DATA Analytic Course</a>
+            </div>
+            
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--//nav end-->
+  <section> 
+     <div class="container"> 
+      <div class="row"> 
+          <h1 class="p-5">Best Front End Developer Course Online – CNC Web 
+World</h1> 
+          <div class="col-sm-6 col-md-6"> 
+            <img src="images/MERN-Stack.jpg" width="100%"> 
+          </div> 
+          <div class="col-sm-6 col-md-6"> 
+            <p> <b>Looking to build highly scalable, modern, and dynamic web applications?</b> The MERN Stack is 
+              one of the most in-demand technologies in today’s software industry.
+               It uses JavaScript for both frontend and backend, making development 
+               faster and more powerful. In our MERN Stack course, you will master MongoDB, 
+               Express, React, and Node.js — along with authentication, APIs, server-side programming,
+                and real-time project building. This program prepares you to develop professional full-stack 
+                applications and confidently apply for top web developer roles. </p>
+                <p> <b>What is MERN Stack?</b> MERN stands for MongoDB, Express, React, 
+                  and Node.js. It allows you to build frontend 
+                  and backend using JavaScript only. This makes 
+                  development faster, easier, and powerful — perfect for large scalable applications. </p>           
+</div> 
+      </div> 
+     </div> 
+ </section> 
+  <section class="p-5"> 
+    <div class="container"> 
+       <div class="row text-center"> 
+            <div class="col-sm-3 col-md-3">   
+             <div class="card p-3 bg-primary text-white"> 
+                 <h6>Duration</h6> 
+                 <p>2 Month</p> 
+             </div> 
+            </div> 
+            <div class="col-sm-3 col-md-3"> 
+              <div class="card p-3 bg-primary text-white"> 
+                <h6>Level</h6> 
+                <p>Beginner</p> 
+              </div> 
+            </div> 
+            <div class="col-sm-3 col-md-3"> 
+              <div class="card p-3 bg-primary text-white"> 
+                <h6>Mentor</h6> 
+                <p>Xyz</p> 
+              </div> 
+            </div> 
+            <div class="col-sm-3 col-md-3"> 
+               <div class="card p-3 bg-primary text-white"> 
+                <h6>Rating:</h6> 
+                <p>4.7/5</p> 
+                </div> 
+            </div> 
+       </div> 
+    </div> 
+  </section> 
+ <section class="p-5 bg-secondary text-light">
+  <div class="container">
+    <!-- Section Heading -->
+    <h2 class="text-center mb-3 fw-bold">Front End Developer Course Syllabus</h2>
+    <p class="text-center mb-4">
+      We’ve carefully crafted our front end web developer course to meet industry standards. Here’s what the course will guide you through:
+    </p>
+
+    <!-- Accordion Syllabus -->
+    <div class="accordion" id="frontendSyllabus">
+
+      <!-- HTML & HTML5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingHTML">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHTML" aria-expanded="true" aria-controls="collapseHTML">
+            HTML & HTML5
+          </button>
+        </h2>
+        <div id="collapseHTML" class="accordion-collapse collapse show" aria-labelledby="headingHTML" data-bs-parent="#frontendSyllabus">
+          <div class="accordion-body">
+            <ul>
+              <li>Introduction to HTML and web fundamentals</li>
+              <li>Structuring web pages with semantic tags</li>
+              <li>Forms, inputs, and validation</li>
+              <li>HTML5 APIs: Audio, Video, Canvas, and Local Storage</li>
+              <li>Accessibility & SEO basics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- CSS & CSS3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCSS">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCSS" aria-expanded="false" aria-controls="collapseCSS">
+            CSS & CSS3
+          </button>
+        </h2>
+        <div id="collapseCSS" class="accordion-collapse collapse" aria-labelledby="headingCSS" data-bs-parent="#frontendSyllabus">
+          <div class="accordion-body">
+            <ul>
+              <li>Selectors, properties, and specificity</li>
+              <li>Box model, positioning, and layout techniques</li>
+              <li>Flexbox and CSS Grid</li>
+              <li>CSS transitions, animations, and transformations</li>
+              <li>Responsive web design with media queries</li>
+              <li>CSS variables and best practices</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingJS">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJS" aria-expanded="false" aria-controls="collapseJS">
+            JavaScript
+          </button>
+        </h2>
+        <div id="collapseJS" class="accordion-collapse collapse" aria-labelledby="headingJS" data-bs-parent="#frontendSyllabus">
+          <div class="accordion-body">
+            <ul>
+              <li>JavaScript basics: Variables, data types, operators</li>
+              <li>Functions, loops, and conditionals</li>
+              <li>DOM manipulation and events</li>
+              <li>ES6 features: let/const, arrow functions, template literals</li>
+              <li>Asynchronous JS: Callbacks, Promises, Fetch API</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bootstrap & Frameworks -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingBootstrap">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBootstrap" aria-expanded="false" aria-controls="collapseBootstrap">
+            Bootstrap & Front-End Frameworks
+          </button>
+        </h2>
+        <div id="collapseBootstrap" class="accordion-collapse collapse" aria-labelledby="headingBootstrap" data-bs-parent="#frontendSyllabus">
+          <div class="accordion-body">
+            <ul>
+              <li>Bootstrap 5: Grid system, utilities, components</li>
+              <li>Responsive layouts and navigation</li>
+              <li>Integration with JS and modals</li>
+              <li>Best practices for production-ready pages</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Work -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingProject">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProject" aria-expanded="false" aria-controls="collapseProject">
+            Project Work
+          </button>
+        </h2>
+        <div id="collapseProject" class="accordion-collapse collapse" aria-labelledby="headingProject" data-bs-parent="#frontendSyllabus">
+          <div class="accordion-body">
+            <ul>
+              <li>Build responsive landing pages</li>
+              <li>Create interactive web forms</li>
+              <li>Develop a personal portfolio website</li>
+              <li>Capstone project: Full front-end website from scratch</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <section class="p-5 bg-light" id="benefits">
+  <div class="container">
+    <!-- Section Heading -->
+    <h2 class="text-center mb-4 fw-bold">Benefits of Becoming a Front End Developer</h2>
+    <p class="text-center mb-5 lead">
+      Pursuing a career in front-end development unlocks numerous opportunities. Here are a few key advantages:
+    </p>
+
+    <!-- Benefits Cards -->
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 text-center border-primary" style="box-shadow: 3px 3px 3px 3px ;">
+          <div class="card-body">
+            <h5 class="card-title">💰 High-Paying Jobs</h5>
+            <p class="card-text">Opportunities in IT, startups, and freelance markets.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center border-success" style="box-shadow: 3px 3px 3px 3px ;">
+          <div class="card-body">
+            <h5 class="card-title">💻 Creative & Logical Role</h5>
+            <p class="card-text">Combines design with coding for a fulfilling career.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center border-info" style="box-shadow: 3px 3px 3px 3px ;">
+          <div class="card-body">
+            <h5 class="card-title">🌐 Remote Work</h5>
+            <p class="card-text">Work across global tech firms from anywhere.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 text-center border-warning"style="box-shadow: 3px 3px 3px 3px ;">
+          <div class="card-body">
+            <h5 class="card-title">📈 High Demand</h5>
+            <p class="card-text">Front end skills are highly sought after in the digital world.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 text-center border-danger" style="box-shadow: 3px 3px 3px 3px ;">
+          <div class="card-body">
+            <h5 class="card-title">📚 Continuous Learning</h5>
+            <p class="card-text">Keep evolving with new technologies and frameworks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Career Roles -->
+    <div class="text-center mt-5">
+      <h4 class="fw-bold mb-3">Career Roles You Can Apply For</h4>
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <span class="badge bg-primary px-3 py-2">Front End Developer</span>
+        <span class="badge bg-secondary px-3 py-2">UI Developer</span>
+        <span class="badge bg-success px-3 py-2">Web Designer</span>
+        <span class="badge bg-info text-dark px-3 py-2">React Developer</span>
+        <span class="badge bg-warning text-dark px-3 py-2">Front End Engineer</span>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+  <footer class="bg-dark text-center text-light p-4">
+    <p>© 2026 Pixel Academy — All Rights Reserved</p>
+  </footer>
+</body>
+</html>
