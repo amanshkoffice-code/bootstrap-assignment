@@ -114,6 +114,23 @@
 footer {
   letter-spacing: 0.5px;
 }
+/* Course Info Card Animation */
+.course-info-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.course-info-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.course-info-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+}
+
 
 </style>
 </head>
@@ -166,7 +183,7 @@ footer {
   <section> 
      <div class="container"> 
       <div class="row"> 
-          <h1 class="p-5">Best Front End Developer Course Online – CNC Web 
+          <h1 class="p-5 mt-5 mt-sm-4 mt-md-3 mt-lg-4 mt-xl-5">Best Front End Developer Course Online – CNC Web 
 World</h1> 
           <div class="col-sm-6 col-md-6"> 
             <img src="images/reactjs.png" width="100%"> 
@@ -187,36 +204,43 @@ World</h1>
       </div> 
      </div> 
  </section> 
+  <!-- Course Info Section -->
   <section class="p-5"> 
-    <div class="container"> 
-       <div class="row text-center"> 
-            <div class="col-sm-3 col-md-3">   
-             <div class="card p-3 bg-primary text-white"> 
-                 <h6>Duration</h6> 
-                 <p>2 Month</p> 
-             </div> 
-            </div> 
-            <div class="col-sm-3 col-md-3"> 
-              <div class="card p-3 bg-primary text-white"> 
-                <h6>Level</h6> 
-                <p>Beginner</p> 
-              </div> 
-            </div> 
-            <div class="col-sm-3 col-md-3"> 
-              <div class="card p-3 bg-primary text-white"> 
-                <h6>Mentor</h6> 
-                <p>Xyz</p> 
-              </div> 
-            </div> 
-            <div class="col-sm-3 col-md-3"> 
-               <div class="card p-3 bg-primary text-white"> 
-                <h6>Rating:</h6> 
-                <p>4.7/5</p> 
-                </div> 
-            </div> 
-       </div> 
+  <div class="container"> 
+    <div class="row text-center gy-4"> 
+
+      <div class="col-12 col-sm-6 col-md-3">   
+        <div class="card p-3 bg-primary text-white h-100 course-info-card"> 
+          <h6>Duration</h6> 
+          <p>6 Month</p> 
+        </div> 
+      </div> 
+
+      <div class="col-12 col-sm-6 col-md-3"> 
+        <div class="card p-3 bg-primary text-white h-100 course-info-card"> 
+          <h6>Level</h6> 
+          <p>Intermediate</p> 
+        </div> 
+      </div> 
+
+      <div class="col-12 col-sm-6 col-md-3"> 
+        <div class="card p-3 bg-primary text-white h-100 course-info-card"> 
+          <h6>Mentor</h6> 
+          <p>Nikola tesla </p> 
+        </div> 
+      </div> 
+
+      <div class="col-12 col-sm-6 col-md-3"> 
+        <div class="card p-3 bg-primary text-white h-100 course-info-card"> 
+          <h6>Rating</h6> 
+          <p>4.5 / 5</p> 
+        </div> 
+      </div> 
+
     </div> 
-  </section> 
+  </div> 
+</section>
+<!-- Course Info Section end-->
  <section class="p-5 bg-secondary text-light">
   <div class="container">
     <!-- Section Heading -->
@@ -400,5 +424,19 @@ World</h1>
   <footer class="bg-dark text-center text-light p-4">
     <p>© 2026 Pixel Academy — All Rights Reserved</p>
   </footer>
+  <script>
+  const infoObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document
+    .querySelectorAll(".course-info-card")
+    .forEach(card => infoObserver.observe(card));
+</script>
+
 </body>
 </html>

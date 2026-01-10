@@ -15,6 +15,11 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
   </script>
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <!-- Custom CSS for designing -->
   <style>
   /* Colors */
@@ -43,6 +48,60 @@
 .btn-primary {
   background: var(--primary);
   border: none;
+}
+ .animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-sticky {
+  position: fixed;
+  top: 400px;
+  left: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  z-index: 9999;
+}
+
+.contact-item {
+  width: 50px;
+  height: 40px;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.25s ease;
+}
+
+.contact-item:hover {
+  transform: scale(1.15);
+  background: #28a745;
+  color: white;
+}
+.top-left-icon {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  font-size: 40px;
+  color: gold;
+  z-index: 9999;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.top-left-icon:hover {
+  transform: scale(1.2) rotate(-5deg);
 }
 
 .btn-outline-primary {
@@ -98,6 +157,66 @@
   color: #2b2b2b;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
 }
+/* WHY CHOOSE US */
+.why-choose {
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+}
+
+.why-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(37,99,235,0.15), transparent);
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+
+.why-card:hover::before {
+  transform: translateX(100%);
+}
+
+.why-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 25px 45px rgba(37,99,235,0.25);
+}
+
+.why-icon {
+  font-size: 48px;
+  color: #2563eb;
+  margin-bottom: 20px;
+  display: inline-block;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* entry animation */
+.why-card {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.why-card:nth-child(1) { animation-delay: 0.2s; }
+.why-card:nth-child(2) { animation-delay: 0.4s; }
+.why-card:nth-child(3) { animation-delay: 0.6s; }
+.why-card:nth-child(4) { animation-delay: 0.8s; }
+.why-card:nth-child(5) { animation-delay: 1s; }
+
 
 .about-section h1 {
   font-weight: 700;
@@ -124,7 +243,7 @@ footer {
   <nav class="navbar navbar-expand-sm navbar-dark shadow-sm main-nav fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html"> Pixel Acedemy</a>
-    
+      <marquee behavior="scroll" direction="" width="160px" style="font-size: larger;color: #e5e7eb;">Welcome to Pixel Acedemy.......  Learn 📖   Grow  📈   Succeed 🎯</marquee>
       <button class="navbar-toggler" type="button"
         data-bs-toggle="collapse"
         data-bs-target="#collapsibleNavId">
@@ -163,84 +282,280 @@ footer {
     </div>
   </nav>
   <!--//nav end-->
+<div class="contact-sticky">
+  <a href="tel:+919999999999" class="contact-item">
+    <i class="fas fa-phone"></i>
+  </a>
 
+  <a href="https://wa.me/919999999999" target="_blank" class="contact-item">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+ 
   <!--home start-->
-  <section id="home" class="home d-flex align-items-center">
-    <div class="container text-center text-light">
-      <h1 class="display-4 fw-bold">Welcome to Pixel Acedemy</h1>
-      <p class="lead mt-3">Learn industry-ready IT skills with expert-led courses at Pixel Academy</p>
-      <a href="#course" class="btn btn-primary btn-lg mt-3">Explore Courses</a>
+<section id="home" class="p-0">
+
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
     </div>
-  </section>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="images/bg-1.jpg" class="d-block w-100" style="height:80vh; object-fit:cover;">
+        <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+          <h1 class="fw-bold">Mastery in Frontend Development</h1>
+          <p>Online Training | Hands-on Projects | Placement</p>
+          <a href="#course" class="btn btn-primary btn-sm px-4 mt-3">Explore Courses</a>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="images/bg-2.jpg" class="d-block w-100" style="height:80vh; object-fit:cover;">
+        <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+          <h1 class="fw-bold">Mastery in Java Full Stack</h1>
+          <p>Online Training | Hands-on Projects | Placement</p>
+          <a href="#course" class="btn btn-primary btn-sm px-4 mt-3">Explore Courses</a>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="images/bg-3.jpg" class="d-block w-100" style="height:80vh; object-fit:cover;">
+        <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+          <h1 class="fw-bold">Mastery in Data Analytics</h1>
+          <p>Online Training | Hands-on Projects | Placement</p>
+          <a href="#course" class="btn btn-primary btn-sm px-4 mt-3">Explore Courses</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+</section>
+
+<!--//home-->
+
+
   <!--//home-->
 
   
 
   <section id="course" class="p-5">
-    <div class="container">
-      <h1 class="text-center p-4">Courses We Offer</h1>
-
-      <div class="row g-4">
-        <div class="col-sm-4">
-          <div class="course-card p-4">
-            <h4>Mastery in Frontend Development</h4>
-            <p>
-              Build a strong foundation in web development and become a skilled
-              Front-End Web Developer.
-            </p>
-            <a href="frontend-development.html" class="btn btn-outline-primary">Register Today</a>
-          </div>
-        </div>
-
-        <div class="col-sm-4">
-          <div class="course-card p-4">
-            <h4>Mastery in MERN Stack Development</h4>
-            <p>
-             Learn MongoDB, Express, React, and Node.js to create modern, scalable web apps — 
-            </p>
-            <button class="btn btn-outline-primary">Register Today</button>
-          </div>
-        </div>
-
-        <div class="col-sm-4">
-          <div class="course-card p-4">
-            <h4>Mastery in Full-Stack Python Development</h4>
-            <p>
-               Build powerful,  Django/Flask, APIs, databases, and deployment workflows — expert mentors.
-            </p>
-            <button class="btn btn-outline-primary">Register Today</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
- <section id="about" class="p-5 about-section">
   <div class="container">
-    <h1 class="text-center mb-4">About Us</h1>
+    <h1 class="text-center p-4">Courses We Offer</h1>
 
-    <div class="row align-items-center mt-4">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="images/about.jpg" id="abu_im" class="shadow" />
+    <div class="row g-4 gy-2">
+      <!-- Card 1: Frontend Development -->
+      <div class="col-sm-4">
+        <div class="course-card p-4 shadow-sm" style="overflow:hidden;">
+          <img src="images/frond.png" alt="Frontend Development" class="img-fluid rounded mb-3" style="height:180px; object-fit:cover; width:100%;">
+          <h4>Mastery in Frontend Development</h4>
+          <p>
+            Build a strong foundation in web development and become a skilled Front-End Web Developer.
+          </p>
+          <a href="frontend-development.html" class="btn btn-outline-primary">Register Today</a>
+        </div>
       </div>
 
-      <div class="col-md-6 fw-4">
-        <p id="abo_p">
-          <span>Pixel Academy</span> is a modern learning hub focused on building
-          real, job-ready skills through structured training and hands-on
-          practice.  
-          <br /><br />
-          Our mission is to transform learners into confident developers by
-          combining strong fundamentals, guided mentorship, and real-world
-          project experience.  
-          <br /><br />
-          At Pixel Academy, you don’t just learn — you build, innovate, and grow
-          your career.
-        </p>
+      <!-- Card 2: MERN Stack Development -->
+      <div class="col-sm-4">
+        <div class="course-card p-4 shadow-sm" style="overflow:hidden;">
+          <img src="images/MERN-Stack.jpg" alt="MERN Stack Development" class="img-fluid rounded mb-3" style="height:180px; object-fit:cover; width:100%;">
+          <h4>Mastery in MERN Stack Development</h4>
+          <p>
+            Learn MongoDB, Express, React, and Node.js to create modern, scalable web apps.
+          </p>
+          <a href="#" class="btn btn-outline-primary">Register Today</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Full-Stack Python Development -->
+      <div class="col-sm-4">
+        <div class="course-card p-4 shadow-sm" style="overflow:hidden;">
+          <img src="images/python-fullstack.jpg" alt="Full-Stack Python Development" class="img-fluid rounded mb-3" style="height:180px; object-fit:cover; width:100%;">
+          <h4>Mastery in Full-Stack Python Development</h4>
+          <p>
+            Build powerful Django/Flask apps, APIs, databases, and deployment workflows with expert guidance.
+          </p>
+          <a href="#" class="btn btn-outline-primary">Register Today</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+
+  <section class="why-choose p-5 animate">
+  <div class="container">
+    <h1 class="text-center mb-5 fw-bold">Why Choose <span class="text-primary">Pixel Academy</span></h1>
+
+    <!-- ROW 1 (3 cards) -->
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="why-card animate">
+          <i class="bi bi-code-slash why-icon"></i>
+          <h4>Industry-Ready Skills</h4>
+          <p>Learn real-world technologies aligned with current industry demands.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="why-card animate">
+          <i class="bi bi-person-check why-icon"></i>
+          <h4>Expert Mentorship</h4>
+          <p>Guidance from experienced professionals at every learning stage.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="why-card animate">
+          <i class="bi bi-laptop why-icon"></i>
+          <h4>Hands-On Projects</h4>
+          <p>Build live projects to strengthen your portfolio and confidence.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2 (2 cards centered) -->
+    <div class="row g-4 justify-content-center mt-2">
+      <div class="col-md-4">
+        <div class="why-card animate">
+          <i class="bi bi-graph-up-arrow why-icon"></i>
+          <h4>Career Growth</h4>
+          <p>Structured learning paths designed for career acceleration.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="why-card animate">
+          <i class="bi bi-award why-icon"></i>
+          <h4>Placement Support</h4>
+          <p>Resume building, interview prep, and placement assistance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <section id="about" class="p-5 about-section" style="background: linear-gradient(135deg, #eef2ff, #ffffff);">
+  <div class="container">
+    <!-- Section Title -->
+    <h1 class="text-center mb-5 fw-bold" style="color:#21406d;">
+      About <span class="text-primary">Pixel Academy</span>
+    </h1>
+
+    <div class="row align-items-center g-5">
+      <!-- Image / Carousel -->
+      <div class="col-md-6">
+        <div class="about-img position-relative">
+          <div id="aboutImageCarousel" class="carousel slide rounded shadow-lg" data-bs-ride="carousel" data-bs-interval="3000" style="border:6px solid #ffffff;">
+            <div class="carousel-inner rounded">
+              <div class="carousel-item active">
+                <img src="images/about1.jpg" class="d-block w-100 img-fluid rounded" alt="About Image 1" style="height:400px; object-fit:cover;">
+              </div>
+              <div class="carousel-item">
+                <img src="images/about2.jpg" class="d-block w-100 img-fluid rounded" alt="About Image 2" style="height:400px; object-fit:cover;">
+              </div>
+              <div class="carousel-item">
+                <img src="images/about3.png" class="d-block w-100 img-fluid rounded" alt="About Image 3" style="height:400px; object-fit:cover;">
+              </div>
+            </div>
+          </div>
+          <!-- Floating icon -->
+          <i class="bi bi-lightbulb-fill" style="position:absolute;top:-20px;right:-20px;font-size:40px;color:#b625eb;animation: floatIcon 3s ease-in-out infinite;"></i>
+        </div>
+      </div>
+
+      <!-- Text Content -->
+      <div class="col-md-6">
+        <p style="font-size:20px; line-height:1.8; color:#2b2b2b;">
+          <span style="font-weight:700;color:#2563eb;">Pixel Academy</span> is a modern learning hub where education meets innovation. We focus on creating 
+          <strong>job-ready skills</strong> through structured training, hands-on projects, and expert mentorship.
+        </p>
+
+        <!-- Features / Highlights -->
+        <div class="row mt-4 g-3">
+          <div class="col-sm-6">
+            <div class="p-3 rounded shadow-sm" style="background:#ffffff; border-left:5px solid #2563eb;">
+              <h5 class="fw-bold"><i class="bi bi-rocket me-2 text-primary"></i>Our Mission</h5>
+              <p style="font-size:16px;">Transform learners into confident developers through practical learning and guidance.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 rounded shadow-sm" style="background:#ffffff; border-left:5px solid #2563eb;">
+              <h5 class="fw-bold"><i class="bi bi-eye-fill me-2 text-primary"></i>Our Vision</h5>
+              <p style="font-size:16px;">Empower students to innovate and excel in the tech industry worldwide.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 rounded shadow-sm" style="background:#ffffff; border-left:5px solid #2563eb;">
+              <h5 class="fw-bold"><i class="bi bi-award-fill me-2 text-primary"></i>Our Values</h5>
+              <p style="font-size:16px;">Quality, Innovation, Mentorship, Practical Learning.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 rounded shadow-sm" style="background:#ffffff; border-left:5px solid #2563eb;">
+              <h5 class="fw-bold"><i class="bi bi-people-fill me-2 text-primary"></i>Our Promise</h5>
+              <p style="font-size:16px;">Every student gets personalized guidance and project-based learning.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to action -->
+        <a href="#course" class="btn btn-primary btn-lg mt-4">Explore Our Courses</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating icon animation -->
+  <style>
+    @keyframes floatIcon {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .about-section p, .about-section h5 {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .about-section.show p, .about-section.show h5 {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+  <script>
+    // IntersectionObserver for about section animation
+    const aboutObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("show");
+        }
+      });
+    }, {threshold:0.15});
+
+    document.querySelectorAll(".about-section").forEach(el => aboutObserver.observe(el));
+  </script>
+</section>
+
 
   <section id="contact" class="p-5 contact-section">
     <div class="container">
@@ -281,8 +596,69 @@ footer {
     </div>
   </section>
 
-  <footer class="bg-dark text-center text-light p-4">
-    <p>© 2026 Pixel Academy — All Rights Reserved</p>
-  </footer>
+  <footer class="bg-dark text-light pt-5">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
+
+      <!-- Logo & Brand -->
+      <div class="col-md-4 mb-4">
+        <h3 class="fw-bold text-white">Pixel Academy</h3>
+        <p class="small text-muted">
+          Empowering future developers with industry-ready skills, real-world projects,
+          and expert mentorship.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4 text-center">
+        <h5 class="fw-semibold mb-3">Follow Us</h5>
+        <div class="d-flex justify-content-center gap-3">
+
+          <a href="https://www.youtube.com/" target="_blank" class="social-icon">
+            <i class="bi bi-youtube" style="font-size:28px;"></i>
+          </a>
+
+          <a href="https://www.instagram.com/" target="_blank" class="social-icon">
+            <i class="bi bi-instagram" style="font-size:28px;"></i>
+          </a>
+
+          <a href="https://twitter.com/" target="_blank" class="social-icon">
+            <i class="bi bi-twitter-x" style="font-size:28px;"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/" target="_blank" class="social-icon">
+            <i class="bi bi-linkedin" style="font-size:28px;"></i>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="col-md-4 mb-4 text-md-end text-center">
+        <p class="mb-1">© 2026 Pixel Academy</p>
+        <small class="text-muted">All Rights Reserved</small>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary">
+
+    <div class="text-center pb-3 small text-muted">
+      Designed & Developed by Pixel Academy
+    </div>
+  </div>
+</footer>
+
+  <script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll(".animate").forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
