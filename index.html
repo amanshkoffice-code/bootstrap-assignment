@@ -234,6 +234,24 @@ footer {
   letter-spacing: 0.5px;
 }
 
+    .course-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Mobile fix */
+@media (max-width: 576px) {
+  .course-img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .course-card {
+    padding: 1rem !important;
+  }
+}
+
 </style>
 </head>
 
@@ -355,7 +373,7 @@ footer {
 
   
 
-  <section id="course" class="p-5">
+  <section id="course" class="py-5 px-2 px-sm-3 px-md-5">
   <div class="container">
     <h1 class="text-center p-4">Courses We Offer</h1>
 
@@ -363,7 +381,7 @@ footer {
       <!-- Card 1: Frontend Development -->
       <div class="col-12 col-sm-6 col-md-4">
         <div class="course-card p-4 shadow-sm" style="overflow:hidden;">
-          <img src="images/frond.png" alt="Frontend Development" class="img-fluid rounded mb-3" style="height:180px; object-fit:cover; width:100%;">
+          <img src="images/frond.png" alt="Frontend Development"class="img-fluid rounded mb-3 course-img">
           <h4>Mastery in Frontend Development</h4>
           <p>
             Build a strong foundation in web development and become a skilled Front-End Web Developer.
@@ -375,7 +393,8 @@ footer {
       <!-- Card 2: MERN Stack Development -->
       <div class="col-12 col-sm-6 col-md-4">
         <div class="course-card p-4 shadow-sm" style="overflow:hidden;">
-          <img src="images/MERN-Stack.jpg" alt="MERN Stack Development" class="img-fluid rounded mb-3" style="height:180px; object-fit:cover; width:100%;">
+          <img src="images/MERN-Stack.jpg"  alt="MERN STACK Development"
+     class="img-fluid rounded mb-3 course-img">
           <h4>Mastery in MERN Stack Development</h4>
           <p>
             Learn MongoDB, Express, React, and Node.js to create modern, scalable web apps.
@@ -387,7 +406,8 @@ footer {
       <!-- Card 3: Full-Stack Python Development -->
       <div class="col-12 col-sm-6 col-md-4">
         <div class="course-card p-4 shadow-sm" style="overflow:hidden;">
-          <img src="images/python-fullstack.jpg" alt="Full-Stack Python Development" class="img-fluid rounded mb-3" style="height:180px; object-fit:cover; width:100%;">
+          <img src="images/python-fullstack.jpg" <img src="images/frond.png" alt="FULL STACK PYTHON"
+     class="img-fluid rounded mb-3 course-img">
           <h4>Mastery in Full-Stack Python Development</h4>
           <p>
             Build powerful Django/Flask apps, APIs, databases, and deployment workflows with expert guidance.
