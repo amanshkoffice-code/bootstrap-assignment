@@ -76,46 +76,148 @@
 </section>
 
 <!-- COURSE INFO -->
-<section class="p-5">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-12 col-md-3">
-        <div class="card p-3 bg-primary text-white"><h6>Duration</h6><p>6 Month</p></div>
-      </div>
-      <div class="col-12 col-md-3">
-        <div class="card p-3 bg-primary text-white"><h6>Level</h6><p>Beginner</p></div>
-      </div>
-      <div class="col-12 col-md-3">
-        <div class="card p-3 bg-primary text-white"><h6>Mentor</h6><p>Dr Doom</p></div>
-      </div>
-      <div class="col-12 col-md-3">
-        <div class="card p-3 bg-primary text-white"><h6>Rating</h6><p>4.7/5</p></div>
-      </div>
-    </div>
-  </div>
+ <section class="p-5"> 
+  <div class="container"> 
+    <div class="row text-center gy-4"> 
+
+      <div class="col-12 col-sm-6 col-md-3">   
+        <div class="card p-3 bg-primary text-white h-100 course-info-card"> 
+          <h6>Duration</h6> 
+          <p>2 Month</p> 
+        </div> 
+      </div> 
+
+      <div class="col-12 col-sm-6 col-md-3"> 
+        <div class="card p-3 bg-primary text-white h-100 course-info-card"> 
+          <h6>Level</h6> 
+          <p>Beginner</p> 
+        </div> 
+      </div> 
+
+      <div class="col-12 col-sm-6 col-md-3"> 
+        <div class="card p-3 bg-primary text-white h-100 course-info-card"> 
+          <h6>Mentor</h6> 
+          <p>Xyz</p> 
+        </div> 
+      </div> 
+
+      <div class="col-12 col-sm-6 col-md-3"> 
+        <div class="card p-3 bg-primary text-white h-100 course-info-card"> 
+          <h6>Rating</h6> 
+          <p>4.7 / 5</p> 
+        </div> 
+      </div> 
+
+    </div> 
+  </div> 
 </section>
 
 <!-- SYLLABUS -->
 <section class="p-5 bg-secondary text-light">
   <div class="container">
-    <h2 class="text-center fw-bold mb-4">React JS Course Syllabus</h2>
+    <h2 class="text-center fw-bold mb-3">React JS Course Syllabus</h2>
+    <p class="text-center mb-4">
+      Industry-oriented syllabus designed for real-world React development.
+    </p>
 
     <div class="accordion" id="reactSyllabus">
+
+      <!-- JavaScript -->
       <div class="accordion-item">
         <h2 class="accordion-header">
-          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#js">JavaScript Refresher</button>
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#js">
+            JavaScript Refresher
+          </button>
         </h2>
         <div id="js" class="accordion-collapse collapse show">
           <div class="accordion-body">
             <ul>
               <li>ES6 fundamentals</li>
-              <li>Promises & async/await</li>
+              <li>Arrow functions, spread operator</li>
+              <li>Array & object destructuring</li>
+              <li>Promises and async/await</li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
 
+      <!-- React Basics -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#reactBasics">
+            React Fundamentals
+          </button>
+        </h2>
+        <div id="reactBasics" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <ul>
+              <li>JSX & Virtual DOM</li>
+              <li>Components & props</li>
+              <li>State & events</li>
+              <li>Folder structure</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hooks -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#hooks">
+            React Hooks
+          </button>
+        </h2>
+        <div id="hooks" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <ul>
+              <li>useState & useEffect</li>
+              <li>useContext</li>
+              <li>Custom hooks</li>
+              <li>Performance optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Routing -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#routing">
+            Routing & API Integration
+          </button>
+        </h2>
+        <div id="routing" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <ul>
+              <li>React Router</li>
+              <li>Dynamic routes</li>
+              <li>REST API integration</li>
+              <li>Axios & Fetch API</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#projects">
+            Project Work
+          </button>
+        </h2>
+        <div id="projects" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <ul>
+              <li>React Portfolio Website</li>
+              <li>Dashboard application</li>
+              <li>API-based project</li>
+              <li>Capstone React App</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
