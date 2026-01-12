@@ -3,398 +3,180 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Frontend course Pixel academy</title>
+  <title>React js course Pixel academy</title>
 
-  <!-- Bootstrap file attached -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-  </script>
-
-  <!-- Custom CSS for designing -->
   <style>
-  /* Colors */
-:root {
-  --primary: #2b6cb0;
-  --secondary: #1a202c;
-  --light: #f7fafc;
-}
-
-/* Navbar */
-.main-nav {
-  background: linear-gradient(90deg, #0f172a, #1e293b);
-}
-
-/* Hero section */
-.home {
-  min-height: 80vh;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url("images/hero.jpg") center/cover no-repeat;
-}
-
-/* Buttons */
-.btn-primary {
-  background: var(--primary);
-  border: none;
-}
-
-.btn-outline-primary {
-  border-color: var(--primary);
-}
-
-/* Course cards */
-.course-card {
-  border-radius: 18px;
-  border: 1px solid #e5e7eb;
-  background: white;
-  transition: 0.3s;
-}
-
-.course-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
-}
-
-/* Contact */
-.contact-section {
-  background: linear-gradient(135deg, #0f172a, #1f2937);
-}
-#about {
-  background: #f4f6fb;
-}
-
-#abu_im {
-  border-radius: 14px;
-  border: 6px solid #ffffff;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-  width: 100%;
-  height: auto;
-}
-
-#abo_p {
-  text-align: justify;
-  line-height: 1.8;
-  font-size: 22px;
-
-  border-radius: 14px;
-  padding: 24px;
-
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.9)
-    ),
-    url("images/abtex.jpg");
-
-  background-size: cover;
-  background-position: center;
-
-  color: #2b2b2b;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
-}
-
-.about-section h1 {
-  font-weight: 700;
-  color: #21406d;
-  letter-spacing: 1px;
-}
-
-.about-section span {
-  color: #2563eb;
-  font-weight: 700;
-}
-
-/* Footer */
-footer {
-  letter-spacing: 0.5px;
-}
-
-</style>
+    :root {
+      --primary: #2b6cb0;
+      --secondary: #1a202c;
+      --light: #f7fafc;
+    }
+    .main-nav {
+      background: linear-gradient(90deg, #0f172a, #1e293b);
+    }
+    .btn-primary {
+      background: var(--primary);
+      border: none;
+    }
+    footer {
+      letter-spacing: 0.5px;
+    }
+  </style>
 </head>
 
-
 <body>
-  <!--nav start-->
-  <nav class="navbar navbar-expand-sm navbar-dark shadow-sm main-nav fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html"> Pixel Acedemy</a>
 
-      <button class="navbar-toggler" type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapsibleNavId">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<!-- NAV -->
+<nav class="navbar navbar-expand-sm navbar-dark shadow-sm main-nav fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Pixel Academy</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Course</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="frontendcourse.html">FrontEnd Development</a>
+            <a class="dropdown-item" href="pythonfullstack.html">Python FullStack</a>
+            <a class="dropdown-item" href="javacourse.html">Java Course</a>
+            <a class="dropdown-item" href="reactjscourse.html">React JS Course</a>
+            <a class="dropdown-item" href="dataanalyticcourse.html">Data Analytics</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" href="#home">Home</a>
-          </li>
+<!-- HERO -->
+<section class="pt-5 mt-5">
+  <div class="container">
+    <div class="row">
+      <h1 class="p-5">Best React Developer Course Online – Pixel Academy</h1>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
+      <div class="col-12 col-md-6">
+        <img src="images/reactjs.png" class="img-fluid">
+      </div>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#course" data-bs-toggle="dropdown">
-              Course
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="frontendcourse.html">FrontEnd Development</a>
-              <a class="dropdown-item" href="pythonfullstack.html">PYTHON FullStack Course </a>
-              <a class="dropdown-item" href="javacourse.html">JAVA Course </a>
-              <a class="dropdown-item" href="reactjscourse.html">REACT js Course</a>
-              <a class="dropdown-item" href="dataanalyticcourse.html">DATA Analytic Course</a>
-            </div>
-            
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact Us</a>
-          </li>
-        </ul>
+      <div class="col-12 col-md-6">
+        <p><b>Want to build powerful, fast, and modern web applications?</b> Learning React JS is one of the best ways to start a strong career in web development.</p>
+        <p><b>What is React JS?</b> React JS is a JavaScript library used to build dynamic user interfaces.</p>
       </div>
     </div>
-  </nav>
-  <!--//nav end-->
-  <section> 
-     <div class="container"> 
-      <div class="row"> 
-          <h1 class="p-5">Best Front End Developer Course Online – CNC Web 
-World</h1> 
-          <div class="col-sm-6 col-md-6"> 
-            <img src="images/reactjs.png" width="100%"> 
-          </div> 
-          <div class="col-sm-6 col-md-6"> 
-           <p> <b>Want to build powerful, fast, and modern web applications?</b> Learning React JS is one of the best ways to start a
-             strong career in web development. React is the most popular JavaScript library used by top companies like Facebook, Amazon, Netflix, and 
-             Instagram. At Pixel Academy, our React JS 
-             course is designed to help beginners and freshers master 
-             component-based development, reusable UI elements, and real-time 
-             data handling. With practical projects and mentor guidance, you’ll 
-             confidently build interactive, responsive, and professional-grade applications ready for real industry use. </p><p> <b>What is React JS?</b> React JS is a JavaScript library used to build dynamic user
-               interfaces. Instead of loading whole pages again and again, 
-               React updates only the required parts — making websites faster 
-               and smoother. It is widely used in dashboards, social media apps,
-                e-commerce platforms, and enterprise applications. </p>
-</div> 
-      </div> 
-     </div> 
-  </section> 
-  <section class="p-5"> 
-    <div class="container"> 
-       <div class="row text-center"> 
-            <div class="col-sm-3 col-md-3">   
-             <div class="card p-3 bg-primary text-white"> 
-                 <h6>Duration</h6> 
-                 <p>6 Month</p> 
-             </div> 
-            </div> 
-            <div class="col-sm-3 col-md-3"> 
-              <div class="card p-3 bg-primary text-white"> 
-                <h6>Level</h6> 
-                <p>Beginner</p> 
-              </div> 
-            </div> 
-            <div class="col-sm-3 col-md-3"> 
-              <div class="card p-3 bg-primary text-white"> 
-                <h6>Mentor</h6> 
-                <p>dr doom</p> 
-              </div> 
-            </div> 
-            <div class="col-sm-3 col-md-3"> 
-               <div class="card p-3 bg-primary text-white"> 
-                <h6>Rating:</h6> 
-                <p>4.7/5</p> 
-                </div> 
-            </div> 
-       </div> 
-    </div> 
-  </section>  
-section class="p-5 bg-secondary text-light">
+  </div>
+</section>
+
+<!-- COURSE INFO -->
+<section class="p-5">
   <div class="container">
-    <h2 class="text-center fw-bold mb-3">React JS Course Syllabus</h2>
-    <p class="text-center mb-4">
-      Industry-oriented syllabus designed for real-world React development.
-    </p>
+    <div class="row text-center">
+      <div class="col-12 col-md-3">
+        <div class="card p-3 bg-primary text-white"><h6>Duration</h6><p>6 Month</p></div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="card p-3 bg-primary text-white"><h6>Level</h6><p>Beginner</p></div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="card p-3 bg-primary text-white"><h6>Mentor</h6><p>Dr Doom</p></div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="card p-3 bg-primary text-white"><h6>Rating</h6><p>4.7/5</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYLLABUS -->
+<section class="p-5 bg-secondary text-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">React JS Course Syllabus</h2>
 
     <div class="accordion" id="reactSyllabus">
-
-      <!-- JavaScript -->
       <div class="accordion-item">
         <h2 class="accordion-header">
-          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#js">
-            JavaScript Refresher
-          </button>
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#js">JavaScript Refresher</button>
         </h2>
         <div id="js" class="accordion-collapse collapse show">
           <div class="accordion-body">
             <ul>
               <li>ES6 fundamentals</li>
-              <li>Arrow functions, spread operator</li>
-              <li>Array & object destructuring</li>
-              <li>Promises and async/await</li>
+              <li>Promises & async/await</li>
             </ul>
           </div>
         </div>
       </div>
-
-      <!-- React Basics -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#reactBasics">
-            React Fundamentals
-          </button>
-        </h2>
-        <div id="reactBasics" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            <ul>
-              <li>JSX & Virtual DOM</li>
-              <li>Components & props</li>
-              <li>State & events</li>
-              <li>Folder structure</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hooks -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#hooks">
-            React Hooks
-          </button>
-        </h2>
-        <div id="hooks" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            <ul>
-              <li>useState & useEffect</li>
-              <li>useContext</li>
-              <li>Custom hooks</li>
-              <li>Performance optimization</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Routing -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#routing">
-            Routing & API Integration
-          </button>
-        </h2>
-        <div id="routing" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            <ul>
-              <li>React Router</li>
-              <li>Dynamic routes</li>
-              <li>REST API integration</li>
-              <li>Axios & Fetch API</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Projects -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#projects">
-            Project Work
-          </button>
-        </h2>
-        <div id="projects" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            <ul>
-              <li>React Portfolio Website</li>
-              <li>Dashboard application</li>
-              <li>API-based project</li>
-              <li>Capstone React App</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
     </div>
+
   </div>
 </section>
 
-  
-  <section class="p-5 bg-light" id="benefits">
+<!-- BENEFITS -->
+<section class="p-5 bg-light">
   <div class="container">
-    <!-- Section Heading -->
-    <h2 class="text-center mb-4 fw-bold">Benefits of Becoming a React Developer</h2>
-    <p class="text-center mb-5 lead">
-      Pursuing a career in react development unlocks numerous opportunities. Here are a few key advantages:
-    </p>
+    <h2 class="text-center fw-bold mb-4">Benefits of Becoming a React Developer</h2>
 
-    <!-- Benefits Cards -->
     <div class="row g-4 px-2 px-md-0">
-      <div class="col-md-4">
-        <div class="card h-100 text-center border-primary" style="box-shadow: 3px 3px 3px 3px ;">
+      <div class="col-12 col-md-4">
+        <div class="card h-100 text-center border-primary" style="box-shadow:3px 3px 3px 3px;">
           <div class="card-body">
-            <h5 class="card-title">💰 High-Paying Jobs</h5>
-            <p class="card-text">Opportunities in IT, startups, and freelance markets.</p>
+            <h5>💰 High-Paying Jobs</h5>
+            <p>Opportunities in IT and startups.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card h-100 text-center border-success" style="box-shadow: 3px 3px 3px 3px ;">
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 text-center border-success" style="box-shadow:3px 3px 3px 3px;">
           <div class="card-body">
-            <h5 class="card-title">💻 Creative & Logical Role</h5>
-            <p class="card-text">Combines design with coding for a fulfilling career.</p>
+            <h5>💻 Creative Role</h5>
+            <p>Design + coding career.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card h-100 text-center border-info" style="box-shadow: 3px 3px 3px 3px ;">
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 text-center border-info" style="box-shadow:3px 3px 3px 3px;">
           <div class="card-body">
-            <h5 class="card-title">🌐 Remote Work</h5>
-            <p class="card-text">Work across global tech firms from anywhere.</p>
+            <h5>🌐 Remote Work</h5>
+            <p>Work globally.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="card h-100 text-center border-warning"style="box-shadow: 3px 3px 3px 3px ;">
+
+      <div class="col-12 col-md-6">
+        <div class="card h-100 text-center border-warning" style="box-shadow:3px 3px 3px 3px;">
           <div class="card-body">
-            <h5 class="card-title">📈 High Demand</h5>
-            <p class="card-text">Front end skills are highly sought after in the digital world.</p>
+            <h5>📈 High Demand</h5>
+            <p>Front-end skills are in demand.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="card h-100 text-center border-danger" style="box-shadow: 3px 3px 3px 3px ;">
+
+      <div class="col-12 col-md-6">
+        <div class="card h-100 text-center border-danger" style="box-shadow:3px 3px 3px 3px;">
           <div class="card-body">
-            <h5 class="card-title">📚 Continuous Learning</h5>
-            <p class="card-text">Keep evolving with new technologies and frameworks.</p>
+            <h5>📚 Continuous Learning</h5>
+            <p>New frameworks & tools.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Career Roles -->
-    <div class="text-center mt-5">
-      <h4 class="fw-bold mb-3">Career Roles You Can Apply For</h4>
-      <div class="d-flex flex-wrap justify-content-center gap-2">
-        <span class="badge bg-primary px-3 py-2">Front End Developer</span>
-        <span class="badge bg-secondary px-3 py-2">UI Developer</span>
-        <span class="badge bg-success px-3 py-2">Web Designer</span>
-        <span class="badge bg-info text-dark px-3 py-2">React Developer</span>
-        <span class="badge bg-warning text-dark px-3 py-2">Front End Engineer</span>
-      </div>
-    </div>
   </div>
 </section>
-  
 
-  <footer class="bg-dark text-center text-light p-4">
-    <p>© 2026 Pixel Academy — All Rights Reserved</p>
-  </footer>
+<footer class="bg-dark text-center text-light p-4">
+  <p>© 2026 Pixel Academy — All Rights Reserved</p>
+</footer>
+
 </body>
 </html>
