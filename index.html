@@ -26,7 +26,17 @@
 
 /* Navbar */
 .main-nav {
-  background: linear-gradient(90deg, #0f172a, #1e293b);
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #60a5fa, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Hero section */
@@ -51,16 +61,71 @@
 
 /* Course cards */
 .course-card {
+  position: relative;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
   border-radius: 18px;
-  border: 1px solid #e5e7eb;
-  background: white;
-  transition: 0.3s;
+  padding: 26px;
+  color: white;
+  overflow: hidden;
+  transition: transform 0.35s ease;
 }
 
-.course-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+/* Neon Border */
+.course-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 18px;
+  background: linear-gradient(
+    120deg,
+    #38bdf8,
+    #22d3ee,
+    #a78bfa
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
+
+/* Glow effect */
+.course-card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: linear-gradient(
+    120deg,
+    #38bdf8,
+    #22d3ee,
+    #a78bfa
+  );
+  filter: blur(18px);
+  opacity: 0.45;
+  z-index: -1;
+}
+
+/* Hover lift */
+.course-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+.course-card h4 {
+  text-shadow:
+    0 0 8px rgba(56,189,248,0.8);
+}
+.course-card .btn-outline-primary {
+  color: #38bdf8;
+  border-color: #38bdf8;
+}
+
+.course-card .btn-outline-primary:hover {
+  background: #38bdf8;
+  color: #020617;
+}
+
 
 /* Contact */
 .contact-section {
@@ -113,6 +178,97 @@
 /* Footer */
 footer {
   letter-spacing: 0.5px;
+}
+.navbar-nav .nav-link {
+  position: relative;
+  font-weight: 500;
+  margin-left: 14px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+.dropdown-menu {
+  background: #020617;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  animation: dropdownFade 0.3s ease;
+}
+
+.dropdown-item {
+  color: #e5e7eb;
+}
+
+.dropdown-item:hover {
+  background: #1e293b;
+  color: #38bdf8;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.navbar-toggler {
+  border: none;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.9);
+}
+.home {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shiny bottom glow line */
+.home::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #60a5fa,
+    #38bdf8,
+    #22d3ee,
+    transparent
+  );
+  box-shadow:
+    0 0 12px rgba(56,189,248,0.9),
+    0 0 30px rgba(34,211,238,0.6);
+}
+.course-bg {
+  background: radial-gradient(
+      circle at top,
+      #e5e7eb,
+      #cbd5e1,
+      #94a3b8
+    );
 }
 
 </style>
@@ -175,8 +331,8 @@ footer {
   <!--//home-->
 
   
+<section id="course" class="p-5 course-bg">
 
-  <section id="course" class="p-5">
     <div class="container">
       <h1 class="text-center p-4">Courses We Offer</h1>
 
